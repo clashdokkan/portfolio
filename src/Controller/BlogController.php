@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
 final class BlogController extends AbstractController
 {
@@ -15,5 +15,14 @@ final class BlogController extends AbstractController
             'controller_name' => 'BlogController',
         ]);
     }
-    <!--public function -->
+
+    #[Route('/blog/home', name: 'app_home')]
+    public function home(): Response
+    {
+        return $this->render(
+            'blog/home.html.twig',[
+                'title' => "bienvenue",
+                'age' => 17
+            ]);
+    }
 }
