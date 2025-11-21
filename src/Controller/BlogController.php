@@ -25,5 +25,13 @@ final class BlogController extends AbstractController
                 'age' => 187
             ]);
     }
+    #[Route('/blog/cv', name: 'app_cv')]
+    public function cv() : Response 
+    {
+        return $this->render(
+            'blog/cv.html.twig',[
+                'title' => "cv",
+            ]);
+    }
     
 }
