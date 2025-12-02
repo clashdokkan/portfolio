@@ -19,7 +19,7 @@ final class BlogController extends AbstractController
     #[Route('/blog/home', name: 'app_home')]
     public function home(): Response
     {
-        return $this->render('blog/home.html.twig',['title' => "bienvenue",'age' => 1]);
+        return $this->render('blog/home.html.twig',['title' => "bienvenue",'age' => 187]);
     }
     #[Route('/blog/cv', name: 'app_cv')]
     public function cv() : Response 
@@ -35,6 +35,14 @@ final class BlogController extends AbstractController
         return $this->render(
             'blog/plus.html.twig',[
                 'title' => "pour en savoir plus",
+            ]);
+    }
+    #[Route('/blog/competence', name: 'app_competence')]
+    public function competence() : Response 
+    {
+        return $this->render(
+            'blog/competence.html.twig',[
+                'title' => "Competence",
             ]);
     }
 }
