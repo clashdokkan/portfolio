@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class BlogController extends AbstractController
 {
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/blog/home', name: 'app_blog')]
     public function index(): Response
     {
         return $this->render('blog/index.html.twig', [
@@ -16,7 +16,7 @@ final class BlogController extends AbstractController
         ]);
     }
 
-    #[Route('/blog/home', name: 'app_home')]
+    #[Route('/blog', name: 'app_home')]
     public function home(): Response
     {
         return $this->render('blog/home.html.twig',['title' => "bienvenue",'age' => 187]);

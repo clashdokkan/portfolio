@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}CV{% endblock %}
 
 {% block body %}
 <style>
@@ -9,13 +9,50 @@
 </style>
 
 
+
+
+
 <div class="example-wrapper">
     <h1>Je suis LAURET Alexandre</h1>
     <p> Vous trouverez ci-dessous mon cv</p>
     <ul>
-        <a href="{{ asset('files/étudiant.pdf') }}" target="_blank" rel="noopener">Voir mon CV (PDF)</a>
-        <p></p>
-        <a href="{{ asset('files/étudiant.pdf') }}" download>Télécharger mon CV (PDF)</a>
+        <iframe
+            src="{{ asset('files/étudiant.pdf') }}"
+            width="90%" 
+            height="500px"
+            style="border:none;">
+        </iframe>
+        <div>
+    <label class="form-label mt-4">Pour télécharger mon CV veuillez entrer vos informations</label>
+
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+        <label for="emailInput">Adresse Email</label>
+    </div>
+
+    <div class="form-floating">
+        <input type="password" class="form-control" id="passwordInput" placeholder="Mot de passe" autocomplete="off">
+        <label for="passwordInput">Mot de Passe</label>
+    </div>
+</div>
+
+<!-- Bouton au lieu du lien direct -->
+<button id="downloadBtn" class="btn btn-primary mt-3">Télécharger mon CV (PDF)</button>
+
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', function () {
+        const email = document.getElementById('emailInput').value.trim();
+        const password = document.getElementById('passwordInput').value.trim();
+
+        if (email === "" || password === "") {
+            alert("Veuillez remplir l'adresse email et le mot de passe avant de télécharger.");
+            return;
+        }
+
+
+        window.location.href = "{{ asset('files/étudiant.pdf') }}";
+    });
+</script>
     </ul>
 </div>
 <button onclick="window.location.href ='http://127.0.0.1:8000/blog';">retour</button>
