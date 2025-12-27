@@ -3,8 +3,65 @@
 {% block title %}Bienvenue{% endblock %}
 
 {% block body %}
-    <h1>Bienvenue</h1>
-    <p>Bienvenue sur mon site !</p>
+    <style>
+  .btn {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 80px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .centre {
+  text-align: center;
+}
+  .center {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
 
-    <button onclick="window.location.href ='http://127.0.0.1:8000/blog';">retour</button>
+.droite {
+  position: absolute;
+  top: 270px;
+  left: 120px;
+}
+.gauche {
+  position: absolute;
+  top: 270px;
+  left: 1150px;
+}
+  .test {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+  .btn:hover {
+    background-color: #079589ff;
+  }
+</style>
+
+    <h1 class="centre" style="font-size: 75px;">Bienvenue sur mon site !</h1>
+    <h2 class="centre" style="font-size: 25px;">Par où voulez vous commencer : </h2>
+    <div class="centre" style="font-size: 75px;">
+        <a href="http://127.0.0.1:8000/blog/home" class="btn" >Ma presentation</a>
+    </div>
+    <div class="droite">
+        <a href="http://127.0.0.1:8000/blog/cv" class="btn" >Acceder au CV</a>
+    </div>
+    <div class="gauche">
+        <a href="http://127.0.0.1:8000/blog/competence" class="btn" >Mes Compétences</a>
+    </div>
+    <div class="centre" style="font-size: 150px;">
+        <a href="http://127.0.0.1:8000/blog/plus" class="btn" >En savoir plus sur moi </a>
+    </div>
+    <div class="centre" style="font-size: 200px;">
+        <a href="http://127.0.0.1:8000/blog/test" class="btn" >test</a>
+    </div>    
 {% endblock %}

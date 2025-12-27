@@ -45,4 +45,12 @@ final class BlogController extends AbstractController
                 'title' => "Competence",
             ]);
     }
+    #[Route('/blog/test', name: 'app_test')]
+    public function test() : Response 
+    {
+        return $this->render(
+            'blog/test.html.twig',[
+                'title' => "test",
+            ]);
+    }
 }

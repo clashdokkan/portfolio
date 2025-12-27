@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}Test{% endblock %}
+
+{% block body %}    
+
+    <style>
+    
+  .btn {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 80px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .center {
+  text-align: center;
+}
+.droite {
+  text-align: right;
+}
+.gauche {
+  text-align: left;
+}
+
+
+  .btn:hover {
+    background-color: #e81111ff;
+  }
+</style>
+    <div class="center">
+        <a href="http://127.0.0.1:8000/blog/cv" class="btn" >test</a>
+    <div/>
+
+{% endblock %}
+
