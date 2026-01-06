@@ -21,9 +21,16 @@
 }
   .center {
   position: absolute;
-  top: 56%;
-  left: 42%;
+  top: 8%;
+  left: 25%;
 }
+
+  .savoir{
+    position: absolute;
+  top: 65%;
+  left: 43%;
+  }
+
 
 .gauche {
   position: absolute;
@@ -33,12 +40,7 @@
 .droite {
   position: absolute;
   top: 40%;
-  left: 70%;
-}
-  .test {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  left: 68%;
 }
 
 
@@ -46,31 +48,28 @@
     background-color: #079589ff;
   }
 </style>
-
-    <h1 class="centre" style="font-size: 75px;">Bienvenue sur mon site !</h1>
-    <h2 class="centre" style="font-size: 25px;">Par où voulez vous commencer : </h2>
-    <div class="centre" >
+  <div class="center" >
+    <div class="centre">
+    <h1 style="font-size: 75px;">Bienvenue sur mon site !</h1>
+    <h2 style="font-size: 25px;">Par où voulez vous commencer :</h2>
         <a href="http://127.0.0.1:8000/blog/home" class="btn" >Ma presentation</a>
-        <p>Courte présentation de moi </p>
-
+        <p>Une courte présentation de moi. </p>
     </div>
-    <div class="gauche">
-        <a href="http://127.0.0.1:8000/blog/cv" class="btn" >Acceder au CV</a>
-        <p class="centre"> -Accès à mon cv </p>
-        <p class="centre"> -Téléchargement de mon cv </p>
-    </div>
-    <div class="droite">
-        <a href="http://127.0.0.1:8000/blog/competence" class="btn" >Mes Compétences</a>
-          <p class="centre"> -Ce que je sais et appris a faire grâce <br>au BUT Réseaux et Télécommunication.</p> 
-    </div>
-    <div class="centre" >
-      <div style="font-size: 175px;">
-        <a href="http://127.0.0.1:8000/blog/plus" class="btn" >En savoir plus sur moi </a>
+  </div>
+  <div class="gauche">
+      <a href="http://127.0.0.1:8000/blog/cv" class="btn" >Acceder au CV</a>
+      <div class="centre">
+        <p> -Accès à mon CV </p>
+        <p> -Téléchargement de mon CV </p>
       </div>
-    </div>
-    <div class="center" >
-      <p> Découvrir mes passions et mes passe-temps</p>
-    <div class="centre" style="font-size: 200px;">
-        <a href="http://127.0.0.1:8000/blog/test" class="btn" >test</a>
-    </div>    
+  </div>
+  <div class="droite">
+      <a href="http://127.0.0.1:8000/blog/competence" class="btn" >Mes Compétences</a>
+        <p class="centre"> -Ce que je sais et appris a faire grâce au <br> BUT Réseaux et Télécommunication.</p> 
+  </div>
+    <div class="savoir" >
+        <a href="http://127.0.0.1:8000/blog/plus" class="btn" >En savoir plus sur moi </a>
+        <p> Découvrir mes passions et mes passe-temps.</p>
+      </div>
+    </div>   
 {% endblock %}

@@ -12,44 +12,54 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
         <style>
-        .centre {
-  text-align: center;
+            .centre {
+        text-align: center;
+        }
+        body {
+  display: flex;
+  flex-direction: column;
 }
-    </style>
+main {
+  flex: 1;
+}
+
+        </style>
     </head>
     <body>
-            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/blog">Accueil</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarColor02">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="/blog/home">A propos de moi
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/blog/cv">CV
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/blog/competence">Competence
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/blog/plus">Pour en savoir plus
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/blog">Accueil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/blog/home">A propos de moi
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog/cv">CV
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog/competence">Competence
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog/plus">Pour en savoir plus
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
+    </main>
     <style>
         .bton {
     position: fixed;
@@ -69,12 +79,11 @@
     </style>
     <button onclick="window.location.href ='http://127.0.0.1:8000/blog';" class ="bton">retour</button>
     {% block body %}{% endblock %}
-    </body>
-    <foot>
+    <footer>
     <div class="centre" style="font-size: 30px;">
         <p>2026 – LAURET Alexandre – BUT Réseaux et Télécommunications</p>
     </div>
-
-   
-    </foot>   
+    </footer> 
+    </body>
+      
 </html>

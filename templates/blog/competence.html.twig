@@ -3,35 +3,39 @@
 {% block title %}Mes compétence{% endblock %}
 {% block body %}
 <style>
+  .titre {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  }
       .center {
   position: absolute;
-  top: 56%;
-  left: 42%;
+  top: 60%;
+  left: 28%;
 }
 
 .gauche {
   position: absolute;
-  top: 40%;
-  left: 20%;
+  top: 20%;
+  left: 3%;
 }
 .droite {
   position: absolute;
-  top: 40%;
-  left: 70%;
+  top: 20%;
+  left: 63%;
 }
 </style>
+    <div class="titre">
+      <h2>Mes Compétences </h2>
+    </div>
     <div class="gauche">
-        <h1>RT1 - Administrer les réseaux et l’Internet</h1>
-
+        <h4>RT1 - Administrer les réseaux et l’Internet</h4>
     </div>
     <div class="center">
-        <h1>RT2 - Connecter les entreprises et les usagers</h1>
+        <h4>RT3 - Créer des outils et des applications informatiques pour les RT</h4>
          
     </div>
     <div class="droite">
-        <h1>RT3 - Créer des outils et des applications informatiques pour les RT</h1>
-         
+        <h4>RT2 - Connecter les entreprises et les usagers</h4>
     </div>
-    
-
 {% endblock %}
