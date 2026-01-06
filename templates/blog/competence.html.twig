@@ -1,15 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Mes compétence{% endblock %}
-
 {% block body %}
 <style>
-    .centre{
-  text-align: center;
-    }
+      .center {
+  position: absolute;
+  top: 56%;
+  left: 42%;
+}
+
+.gauche {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.droite {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+}
 </style>
-    <div class="centre">
-        <h1>différentes compétence </h1>
-        <h2>je sais faire ça ça ça </h2>
+    <div class="gauche">
+        <h1>RT1 - Administrer les réseaux et l’Internet</h1>
+
     </div>
+    <div class="center">
+        <h1>RT2 - Connecter les entreprises et les usagers</h1>
+         
+    </div>
+    <div class="droite">
+        <h1>RT3 - Créer des outils et des applications informatiques pour les RT</h1>
+         
+    </div>
+    
+
 {% endblock %}
