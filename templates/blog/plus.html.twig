@@ -4,15 +4,61 @@
 
 {% block body %}
 <style>
+    .centre {
+    text-align: center;
+    font-size: 10px;
+    }
+
     .position {
   position: absolute;
-  top: 10%;
-  left: 20%;
+  top: 5%;
+  left: 0%;
+    }
+    .gauche {
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    }
+    .gauche2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    }
+    .droite {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    }
+    .droite2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    }
+    .image {
+    position: static ;
+    width: 550px;
+    height: auto;
+    border-radius: 10px; {#arrondir les bords#}
+    box-shadow: 0 10px 10px rgba(0, 217, 255, 0.3);
 }
+    .p{
+        font-size: 1.5rem;
+    }
+
 </style>
-    <div class="position">
-        <h1>Je suis LAURET Alexandre</h1>
-        <h1>Me contacter :</h1>
-        <h8>adresse MAIL: alexandre.lauret@etu.univ-st-etienne.fr</h2>    
+    <div class="gauche">
+        <h2>Projet </h2>
+        <h5> Au cours de la 2eme année de mon BUT Réseaux et Télécommunications <br> je souhaite intégrer le cinema le Grand Palais de Roanne <br> en tant dalternant plus précisément technicien réseau</h5>
     </div>
+    <div class="droite">
+        <img src="{{ asset('files/cinema-roanne.jpg') }}"class="image" >
+    </div>
+    <div class="gauche2">
+        <img src="{{ asset('files/jeux video .jpg') }}"class="image" >
+    </div>
+    <div class="droite">
+        <h2>Loisirs </h2>
+    <h1>Me contacter :</h1>
+        <h8>adresse MAIL: alexandre.lauret@etu.univ-st-etienne.fr</h2>    
+    
 {% endblock %}
