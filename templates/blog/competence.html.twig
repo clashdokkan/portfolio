@@ -3,41 +3,72 @@
 {% block title %}Mes compétence{% endblock %}
 {% block body %}
 <style>
-  .titre {
-  position: absolute;
-  top: 10%;
-  left: 40%;
+    .titre{
+      text-align: center;
+    }
+    h4 {
+  margin-top: 40px;
+}
+    .section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
   }
-      .center {
-  position: absolute;
-  top: 60%;
-  left: 28%;
-}
 
-.gauche {
-  position: absolute;
-  top: 20%;
-  left: 3%;
+  .colonne {
+  flex-grow: 1;   {#frff#}
+  flex-shrink: 1;
+  flex-basis: 250px;
 }
-.droite {
-  position: absolute;
-  top: 20%;
-  left: 63%;
-}
+  .espace{
+    margin-top: 220px;
+  }
+
+  .image {
+    max-width: 75%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px rgba(0, 217, 255, 0.3);
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+    }
+  }
 </style>
     <div class="titre">
       <h2>Mes Compétences </h2>
     </div>
-    <div class="gauche">
+    <div class="section">
+      <div class="colonne">
         <h4>RT1 - Administrer</h4>
-    </div>
-    <div class="center">
+        <p>Concernant la compétence Administrer des ressources comme R1.02,R1.09 .La ressources R1.08 m'a appris la gestion des VLANs donc comment les configurés
+        les attribuer aux bons ports avec les bonnes adresses IP .Concernant R1.09 m'a appris a structuré une site grâce au html .</p>
+        <div class="espace"></div>
+        <img src="{{ asset('files/connecter.jpg') }}" class="image">
+        <div class="espace"></div>
         <h4>RT3 - Programmer</h4>
-        <p>Pour la compétence proga
-         
-    </div>
-    <div class="droite">
-        <h4>RT2 - Connecter </h4>
-        <p> Grâce aux ressources R1.02/R1.03/R1.08 .La R1.02 m'a appris la gestion d'adresse IP les connexions entre PC 
-    </div>
+        <p>Pour la compétence progammer des ressources comme R1.07 et R1.08 m'ont été extrémement utile.Concernant R1.07 m'a appris le
+        language C et le Python donc pouvoir coder dans ces 2 language .Pour le R1.08 concernant le compétence programmer nous avons appris
+        a gestionner des fichiers à partir d'une invité de commande ubuntu .</p>      
+      </div>
+      <div class="colonne">
+            <img src="{{ asset('files/administrer.jpg') }}" class="image">
+            <div class="espace"></div>
+            <h4>RT2 - Connecter </h4>
+        <p> Grâce aux ressources R1.02/R1.08 .La R1.02 m'a appris la gestion d'adresse IP les connexions entre PC ;
+        grâce à la ressource R1.08 j'ai pu établir des connexions entre une machine virtuelle et un serveur virtuel tout ça sur des systeme d'exploitation
+        Ubuntu .</p>
+        <div class="espace"></div>
+
+            <img src="{{ asset('files/programmer.jpg') }}" class="image">
+
+
+
 {% endblock %}
