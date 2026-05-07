@@ -53,4 +53,29 @@ final class BlogController extends AbstractController
                 'title' => "test",
             ]);
     }
+
+    #[Route('/blog/competence/RT1', name: 'RT1')]
+    public function RT1() : Response 
+    {
+        return $this->render(
+            'blog/RT1_administrer.html.twig',[
+                'title' => "RT1",
+            ]);
+    }
+    #[Route('/blog/competence/RT2', name: 'RT2')]
+    public function RT2() : Response 
+    {
+        return $this->render(
+            'blog/RT2_connecter.html.twig',[
+                'title' => "RT2",
+            ]);
+    }
+    #[Route('/blog/competence/RT3', name: 'RT3')]
+    public function RT3() : Response 
+    {
+        return $this->render(
+            'blog/RT3_creer.html.twig',[
+                'title' => "RT3",
+            ]);
+    }
 }
